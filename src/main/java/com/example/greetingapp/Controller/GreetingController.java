@@ -36,4 +36,8 @@ public class GreetingController {
     public Greeting getElementById(@PathVariable int id){
         return greetingService.getGreetingById(id);
     }
+    @GetMapping("/all")
+    public List<Greeting> getAll(){
+        return greetingService.getAll();
+    }
 }
