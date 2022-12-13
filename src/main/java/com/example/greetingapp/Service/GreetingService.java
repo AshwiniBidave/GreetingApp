@@ -40,6 +40,14 @@ public class GreetingService implements Igreetingservice {
     public List<Greeting> getAll() {
         return greetinRepo.findAll();
     }
+    @Override
+    public Greeting editGreetingById(int id,String name) {
+        Greeting greeting = greetinRepo.findById(id).get();
+        greeting.setMessage("Hello");
+        greeting.setFname(name);
+        greetinRepo.save(greeting);
+        return greeting;
+    }
 
 
 

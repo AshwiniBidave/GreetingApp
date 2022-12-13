@@ -12,7 +12,7 @@ public interface Igreetingservice {
     Greeting addGreeting(User user);
     Greeting getGreetingById(int id);
     List<Greeting> getAll();
-
+    Greeting editGreetingById(int id, String name);
 
 
 }
