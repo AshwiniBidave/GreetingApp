@@ -32,5 +32,11 @@ public class GreetingService implements Igreetingservice {
         greeting.setMessage("Hello");
         return  greetinRepo.save(greeting);
     }
+    @Override
+    public Greeting getGreetingById(int id) {
+        return greetinRepo.findById(id).get();
+
+    }
+
 
 }
