@@ -8,7 +8,7 @@ import java.util.List;
 public interface Igreetingservice {
     String greetingMessage();
 
-
+    String greetingMessage(String name);
 
 
 

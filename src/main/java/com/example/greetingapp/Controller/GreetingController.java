@@ -20,5 +20,8 @@ public class GreetingController {
     public String getmessage(){
         return "Hello World";
     }
-
+    @GetMapping("/hellobynames/{name}")
+    public String getHello(@PathVariable String name) {
+        return "Hello " + name;
+    }
 }

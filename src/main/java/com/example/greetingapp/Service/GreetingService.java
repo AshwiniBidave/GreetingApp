@@ -11,14 +11,21 @@ import java.util.List;
 
 
 @Service
-public class GreetingService implements Igreetingservice{
+public class GreetingService implements Igreetingservice {
 
     @Autowired
     private GreetinRepo greetinRepo;
+
     @Override
     public String greetingMessage() {
         return "Hello World!";
     }
 
+    @Override
+    public String greetingMessage(String name) {
+        String msg = "Hello" + name;
+        return msg;
 
+
+    }
 }
