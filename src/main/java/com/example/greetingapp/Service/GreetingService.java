@@ -48,6 +48,11 @@ public class GreetingService implements Igreetingservice {
         greetinRepo.save(greeting);
         return greeting;
     }
+    @Override
+    public List<Greeting> deleteGreetingById(int id) {
+        greetinRepo.deleteById(id);
+        return greetinRepo.findAll();
+    }
 
 
 

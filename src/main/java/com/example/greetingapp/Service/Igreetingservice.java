@@ -13,6 +13,8 @@ public interface Igreetingservice {
     Greeting getGreetingById(int id);
     List<Greeting> getAll();
     Greeting editGreetingById(int id, String name);
+    List<Greeting> deleteGreetingById(int id);
+
 
 
 }
