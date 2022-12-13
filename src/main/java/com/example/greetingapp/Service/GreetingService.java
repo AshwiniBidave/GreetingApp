@@ -25,7 +25,12 @@ public class GreetingService implements Igreetingservice {
     public String greetingMessage(String name) {
         String msg = "Hello" + name;
         return msg;
-
-
     }
+    @Override
+    public Greeting addGreeting(User user) {
+        Greeting greeting=new Greeting(user);
+        greeting.setMessage("Hello");
+        return  greetinRepo.save(greeting);
+    }
+
 }

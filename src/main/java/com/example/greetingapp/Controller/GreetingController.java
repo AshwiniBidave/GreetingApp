@@ -24,4 +24,12 @@ public class GreetingController {
     public String getHello(@PathVariable String name) {
         return "Hello " + name;
     }
+    @PostMapping("/create")
+    public Greeting createGreeting(@RequestParam(value = "Fname",defaultValue = "world") String Fname,@RequestParam(value = "Lname",defaultValue = "world") String Lname){
+        User user = new User();
+        user.setFname(Fname);
+        user.setLname(Lname);
+        return greetingService.addGreeting(user);
+    }
+
 }

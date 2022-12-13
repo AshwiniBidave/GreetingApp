@@ -9,7 +9,7 @@ public interface Igreetingservice {
     String greetingMessage();
 
     String greetingMessage(String name);
-
+    Greeting addGreeting(User user);
 
 
 }
